@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Playground</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Interactive Playground 🎮</h1>
+        <p>Explore event handling, interactive elements, and form validation!</p>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section id="event-handling" class="card">
+            <h2>1. Event Handling 🎈</h2>
+            
+            <!-- Click Events -->
+            <div class="demo-box">
+                <h3>Click Events</h3>
+                <button id="click-button" class="btn">Click Me!</button>
+                <p id="click-result">Click the button to see what happens...</p>
+                <button id="double-click-button" class="btn secret-btn">Double-Click For a Secret</button>
+                <p id="double-click-result" class="hidden">You found the secret! 🎉</p>
+            </div>
+            
+            <!-- Hover Effects -->
+            <div class="demo-box">
+                <h3>Hover Effects</h3>
+                <div id="hover-box">
+                    <p>Hover over me!</p>
+                </div>
+                <p id="hover-result">Hover count: 0</p>
+            </div>
+            
+            <!-- Keypress Detection -->
+            <div class="demo-box">
+                <h3>Keypress Detection</h3>
+                <div id="key-detection">
+                    <p>Press any key to see its code:</p>
+                    <input type="text" id="key-input" placeholder="Click here and press keys">
+                    <div id="key-result">
+                        <p>Key: <span id="key-name">-</span></p>
+                        <p>Code: <span id="key-code">-</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Long Press -->
+            <div class="demo-box">
+                <h3>Long Press Bonus</h3>
+                <button id="long-press-button" class="btn">Press and Hold</button>
+                <div id="long-press-progress"></div>
+                <p id="long-press-result">Hold the button for 2 seconds</p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section id="interactive-elements" class="card">
+            <h2>2. Interactive Elements 🎮</h2>
+            
+            <!-- Color Changing Button -->
+            <div class="demo-box">
+                <h3>Color Changing Button</h3>
+                <button id="color-button" class="btn">Change My Color</button>
+            </div>
+            
+            <!-- Image Gallery -->
+            <div class="demo-box">
+                <h3>Image Gallery</h3>
+                <div class="gallery">
+                    <div class="gallery-nav">
+                        <button id="prev-btn" class="btn gallery-btn">&lt; Prev</button>
+                        <button id="next-btn" class="btn gallery-btn">Next &gt;</button>
+                    </div>
+                    <div class="gallery-container">
+                        <img id="gallery-img" src="forest2.jpeg" alt="Forest Image">
+                        <div class="gallery-indicators">
+                            <span class="indicator active" data-index="0"></span>
+                            <span class="indicator" data-index="1"></span>
+                            <span class="indicator" data-index="2"></span>
+                            <span class="indicator" data-index="3"></span>
+                        </div>
+                    </div>
+                    <p id="gallery-caption">Image 1 of 4</p>
+                </div>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="demo-box">
+                <h3>Tabs</h3>
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+                        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+                        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab1" class="tab-pane active">
+                            <h4>Tab 1 Content</h4>
+                            <p>This is the content for Tab 1. JavaScript is used to show and hide these tabs.</p>
+                        </div>
+                        <div id="tab2" class="tab-pane">
+                            <h4>Tab 2 Content</h4>
+                            <p>Welcome to Tab 2! Event listeners make this interactive navigation possible.</p>
+                        </div>
+                        <div id="tab3" class="tab-pane">
+                            <h4>Tab 3 Content</h4>
+                            <p>Tab 3 is here. Tabs are a great way to organize content without overwhelming users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion -->
+            <div class="demo-box">
+                <h3>Accordion</h3>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Section 1</div>
+                        <div class="accordion-content">
+                            <p>This is the content for section 1 of the accordion. Click on any header to expand or collapse its content.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Section 2</div>
+                        <div class="accordion-content">
+                            <p>Here's section 2 content. Accordions are perfect for FAQs and other content that needs to be compact.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Section 3</div>
+                        <div class="accordion-content">
+                            <p>And finally, section 3. JavaScript toggles the visibility of these sections based on user clicks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section id="form-validation" class="card">
+            <h2>3. Form Validation 📋✅</h2>
+            <form id="validation-form">
+                <div class="form-group">
+                    <label for="username">Username: <span class="required">*</span></label>
+                    <input type="text" id="username" class="form-control" required>
+                    <div class="feedback" id="username-feedback"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" id="email" class="form-control" required>
+                    <div class="feedback" id="email-feedback"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password: <span class="required">*</span></label>
+                    <input type="password" id="password" class="form-control" required>
+                    <div class="feedback" id="password-feedback"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password: <span class="required">*</span></label>
+                    <input type="password" id="confirm-password" class="form-control" required>
+                    <div class="feedback" id="confirm-password-feedback"></div>
+                </div>
+                
+                <div class="password-strength">
+                    <div class="strength-label">Password Strength:</div>
+                    <div class="strength-meter">
+                        <div id="strength-bar"></div>
+                    </div>
+                    <div id="strength-text">No password</div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn" class="btn submit-btn">Submit</button>
+                    <button type="reset" id="reset-btn" class="btn reset-btn">Reset</button>
+                </div>
+            </form>
+            
+            <div id="form-result" class="hidden">
+                <h3>Form Submitted Successfully! ✅</h3>
+                <div id="form-data-display"></div>
+                <button id="back-btn" class="btn">Back to Form</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with 💖 and JavaScript | © 2025 JavaScript Playground</p>
+    </footer>
+
+    <script src="script6.js"></script>
+</body>
+</html>
